@@ -11,10 +11,11 @@ async function loadMap() {
 
       const waterTiles  = map.layers[0].tiles;
       const groundTiles = map.layers[1].tiles;
-      const decalTiles  = map.layers[3].tiles;
+      const decalTiles  = map.layers[4].tiles;
       const water2D     = []
       const ground2D    = []
       const decal2D     = []
+
         for (let row = 0; row < map.height; row++) {
 
           const waterRow = [];
@@ -31,6 +32,7 @@ async function loadMap() {
             } else {
               groundRow.push(undefined);
             };
+
             const decalTile = decalTiles[row * map.width + col]
             if (decalTile) {
               decalRow.push({id: decalTile.id, gid: decalTile.gid})
@@ -48,8 +50,7 @@ async function loadMap() {
 
     return {water2D,
             ground2D,
-            decal2D,}
-    ; // return id an gid of .tmx file
+            decal2D,}; // return id an gid of .tmx file
 }
 
   

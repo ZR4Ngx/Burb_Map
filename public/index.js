@@ -149,7 +149,7 @@ function loop() {
   }
 
   for ( const player of players) {
-    canvas.drawImage(playerImg, player.x - camera_x, player.y - camera_y, playerImg.width/2, playerImg.height/2);
+    canvas.drawImage(playerImg, player.x - camera_x, player.y - camera_y, playerImg.width/4, playerImg.height/4);
   }
   
   window.requestAnimationFrame(loop)
